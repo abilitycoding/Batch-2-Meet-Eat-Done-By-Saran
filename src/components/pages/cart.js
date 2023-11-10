@@ -43,12 +43,12 @@ const Cart = () => {
       <Row>
         {cartItems.map((card) => (
           <Col key={card._id}>
-            <Card style={{ width: "15rem" }} className="mb-5">
+            <Card style={{ width: "16rem" }} className="mb-5">
               <Card.Img variant="top" src={card.imageSrc} />
               <Card.Body>
                 <Card.Title>{card.title}</Card.Title>
                 <Card.Title>{card.rate}</Card.Title>
-                <div className="d-flex justify-content-between">
+                <div className="d-flex justify-content-between gap-3">
                   <Button
                     variant="primary"
                     onClick={() => {
@@ -90,7 +90,9 @@ const Cart = () => {
         ))}
       </Row>
       <Row>
-        <Button variant="primary">Remove</Button>
+        <span>
+          <Button variant="primary">Proceed To Checkout</Button>
+        </span>
       </Row>
     </Container>
   );
